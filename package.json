@@ -1,0 +1,41 @@
+{
+  "name": "marketing-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-tenant marketing performance platform. Client #1: Frak Finance.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/db/seed.ts",
+    "sync": "tsx scripts/sync.ts",
+    "demo:seed": "tsx scripts/demo-data.ts",
+    "demo:drop": "tsx scripts/demo-data.ts --drop"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "drizzle-orm": "^0.44.5",
+    "postgres": "^3.4.7",
+    "google-auth-library": "^10.4.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2",
+    "drizzle-kit": "^0.31.5",
+    "tsx": "^4.20.5",
+    "vitest": "^3.2.4",
+    "tailwindcss": "^4.1.13",
+    "@tailwindcss/postcss": "^4.1.13",
+    "postcss": "^8.5.6"
+  }
+}
